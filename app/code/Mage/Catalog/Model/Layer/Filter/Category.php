@@ -154,9 +154,9 @@ class Mage_Catalog_Model_Layer_Filter_Category extends Mage_Catalog_Model_Layer_
      */
     protected function _getItemsData()
     {
-        $categoty   = $this->getCategory();
+        $curCategory   = $this->getCategory();
         /** @var $categoty Mage_Catalog_Model_Categeory */
-        $categories = $categoty->getChildrenCategories();
+        $categories = $curCategory->getChildrenCategories();
 
         $this->getLayer()->getProductCollection()
             ->addCountToCategories($categories);
